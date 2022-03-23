@@ -2,6 +2,7 @@ const connection = require('./../inc/db');
 const express = require('express');
 const menus = require('./../inc/menus');
 const reservations = require('./../inc/reservations');
+const contacts = require('./../inc/contacts');
 const {
   render
 } = require('../app');
@@ -21,11 +22,25 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/contacts', function (req, res, next) {
-  res.render('contacts', {
-    title: 'Contato - Pousada KartClub',
-    background: 'images/img_bg_3.jpg',
-    h1: 'Diga um oi!'
-  });
+  contacts.render(req, res);
+});
+
+router.post('/contacts', function (req, res, next) {
+
+  if (!req.body.name) {
+    contacts.render(req, res, "Digite seu nome!");
+  } else if (!req.body.email) {
+    contacts.render(req, res, "Digite seu e-mail!");
+  } else if (!req.body.message) {
+    contacts.render(req, res, "Digite sua mensagem!");
+  } else {
+    contacts.save(req.body).then(results => {
+      req.body = {};
+      contacts.render(req, res, null, "Contato enviado com sucesso!");
+    }).catch(err => {
+      contacts.render(req, res, err.message);
+    });
+  }
 });
 
 router.get('/menus', function (req, res, next) {
@@ -59,7 +74,8 @@ router.post('/reservations', function (req, res, next) {
     reservations.render(req, res, "Selecione a hora!");
   } else {
     reservations.save(req.body).then(results => {
-      reservations.render(req, res, null, "Reserva realizada com SUCESSO!");
+      req.body = {};
+      reservations.render(req, res, null, "Reserva realizada com Sucesso!");
     }).catch(err => {
       reservations.render(req, res, err.message);
     })

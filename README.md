@@ -1,6 +1,5 @@
 # Projeto em CONSTRUÇÃO
 
-<img alt="Readme" tittle="Readme" src="./public/images/1.png">  
 <img alt="Readme" tittle="Readme" src="./public/images/2.png">  
 <img alt="Readme" tittle="Readme" src="./public/images/3.png">  
 <img alt="Readme" tittle="Readme" src="./public/images/4.png">  
