@@ -1,5 +1,5 @@
 # Projeto em CONSTRUÇÃO
-## Parte da Administração em construção(Já feita com algumas funcionalidades!)
+## Parte da Administração em construção(Já feita com interface e algumas funcionalidades, como um CRUD completo!!!)
 
 <img alt="Readme" tittle="Readme" src="./public/images/2.png">  
 <img alt="Readme" tittle="Readme" src="./public/images/3.png">  
