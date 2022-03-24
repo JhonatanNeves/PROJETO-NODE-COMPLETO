@@ -1,6 +1,10 @@
 # Projeto em CONSTRUÇÃO
+<<<<<<< HEAD
 
 ## Parte da Administração em construção
+=======
+## Parte da Administração em construção(Já feita com interface e algumas funcionalidades, como um CRUD completo!!!)
+>>>>>>> 70ee79f6458f9f71650e4fa5d10b02fee931048f
 
 <img alt="Readme" tittle="Readme" src="./public/images/2.png">  
 <img alt="Readme" tittle="Readme" src="./public/images/3.png">  
